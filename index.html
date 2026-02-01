@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Supermercado ECOTEC</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Lista de Supermercados</h1>
+    <p class="subtitle">Agrega productos y gestiona tu listado</p>
+  </header>
+  <main class="container">
+    <section class="card" aria-label="Aplicación lista de supermercado">
+      <form id="formularioProducto" class="form">
+        <div class="field">
+          <label for="nombreProductos">Producto</label>
+          <input
+            id="nombreProducto"
+            class="input"
+            type="text"
+            placeholder="Ej: Lonchy"
+            autocomplete="off"
+          />
+        </div>
+        <div class="field">
+          <label for="cantidadProducto">Cantidad</label>
+          <input
+            id="cantidadProducto"
+            class="input"
+            type="number"
+            min="1"
+            placeholder="Ej: 2"
+          />
+        </div>
+        <button id="aggProducto" class="btn btn-primary" type="submit">
+          Agregar
+        </button>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+      <div class="Contadores">
+        <div class="Contador">
+          <span class="contador-label">Total</span>
+          <span id="total" class="contador-value">0</span>
+        </div>
+        <div class="Contador">
+          <span class="Contador-label">Comprados</span>
+          <span id="totalComprado" class="contador-value">0</span>
+        </div>
+        <div class="Contador">
+          <span class="contador-label">Pendientes</span>
+          <span id="pendientes" class="contador-value">0</span>
+        </div>
+      </div>
+      <section class="list-section">
+        <h2>Mis productos</h2>
+        <ul id="productList" class="list">
+
+        </ul>
+      </section>
+    </section>
+  </main>
+  <footer class="footer">
+    <small>Proyecto académico — HTML + CSS + JS + GitHub + Tarea Ecotec PROGRAMACION DE SISTEMAS WEB
+    </small>
+  </footer>
+
+  
+</body>
+</html>
