@@ -1,12 +1,14 @@
 const formulario = document.getElementById("formularioProducto");
 const inputNombre = document.getElementById("nombreProducto");
 const inputCantidad = document.getElementById("cantidadProducto");
+const lista = document.getElementById("listaProductos");
 
 formulario.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const nombre = inputNombre.value.trim();
   const cantidad = inputCantidad.value.trim();
+
 if (nombre === "" && cantidad === "") {
     Swal.fire({
       icon: "error",
@@ -43,11 +45,46 @@ if (nombre === "" && cantidad === "") {
     });
     return;
   }
+
+  agregarProductoLista(nombre, cantidad);
   Swal.fire({
     icon: "success",
-    title: "Validación correcta",
-    text: "Los datos son válidos. Producto listo para agregarse.",
-    confirmButtonColor: "#2e7d32"
+    title: "Agregado",
+    text: "Producto insertado en la lista",
+    timer: 2000,
+    showConfirmButton: false,
   });
 
+  inputNombre.value = "";
+  inputCantidad.value = "";
+  inputNombre.focus();
 });
+
+function agregarProductoLista(nombre, cantidad) {
+    const tr = document.createElement("tr");
+  
+    const tdNombre = document.createElement("td");
+    tdNombre.textContent = nombre;
+  
+    const tdCantidad = document.createElement("td");
+    tdCantidad.textContent = cantidad;
+  
+    const tdAcciones = document.createElement("td");
+  
+    const btnEliminar = document.createElement("button");
+    btnEliminar.type = "button";
+    btnEliminar.textContent = "Eliminar";
+    btnEliminar.classList.add("btn"); 
+
+    btnEliminar.addEventListener("click", () => {
+        tr.remove();
+      });
+    
+    tdAcciones.appendChild(btnEliminar);
+
+    tr.appendChild(tdNombre);
+    tr.appendChild(tdCantidad);
+    tr.appendChild(tdAcciones);
+  
+    lista.appendChild(tr);
+  }
