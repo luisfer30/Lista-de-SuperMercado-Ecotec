@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+  }
+  .header {
+    background-color: #0d47a1;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  /* Contenedor del formulario  */
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Formulario */
+  .form {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .field label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #0d47a1;
+  }
+  
+  /* Botón */
+  .btn {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .btn-primary {
+    background-color: #0d47a1;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #08306b;
+  }
+  
+  /* Mensajes */
+  .message {
+    font-size: 0.9rem;
+    color: #0d47a1;
+  }
+  
+  /* Contadores */
+  .Contadores {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .Contador {
+    background-color: #f0f2f5;
+    padding: 0.8rem;
+    border-radius: 6px;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .contador-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  .contador-value {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0d47a1;
+  }
+  
+  /* Lista de productos */
+  .list-section h2 {
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid #0d47a1;
+    padding-bottom: 0.3rem;
+  }
+  
+  .list {
+    list-style: none;
+  }
+  
+  .list li {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
