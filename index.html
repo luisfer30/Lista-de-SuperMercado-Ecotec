@@ -15,7 +15,7 @@
     <section class="card" aria-label="Aplicación lista de supermercado">
       <form id="formularioProducto" class="form">
         <div class="field">
-          <label for="nombreProductos">Producto</label>
+          <label for="nombreProducto">Producto</label>
           <input
             id="nombreProducto"
             class="input"
@@ -37,7 +37,6 @@
         <button id="aggProducto" class="btn btn-primary" type="submit">
           Agregar
         </button>
-        <p id="message" class="message" role="status" aria-live="polite"></p>
       </form>
       <div class="Contadores">
         <div class="Contador">
@@ -45,7 +44,7 @@
           <span id="total" class="contador-value">0</span>
         </div>
         <div class="Contador">
-          <span class="Contador-label">Comprados</span>
+          <span class="contador-label">Comprados</span>
           <span id="totalComprado" class="contador-value">0</span>
         </div>
         <div class="Contador">
@@ -55,8 +54,7 @@
       </div>
       <section class="list-section">
         <h2>Mis productos</h2>
-        <ul id="productList" class="list">
-
+        <ul id="listaProductos" class="list">
         </ul>
       </section>
     </section>
@@ -65,7 +63,7 @@
     <small>Proyecto académico — HTML + CSS + JS + GitHub + Tarea Ecotec PROGRAMACION DE SISTEMAS WEB
     </small>
   </footer>
-
-  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
