@@ -2,6 +2,9 @@ const formulario = document.getElementById("formularioProducto");
 const inputNombre = document.getElementById("nombreProducto");
 const inputCantidad = document.getElementById("cantidadProducto");
 const lista = document.getElementById("listaProductos");
+const contadorTotal = document.getElementById("total");
+const contadorComprados = document.getElementById("totalComprado");
+const contadorPendientes = document.getElementById("pendientes");
 
 formulario.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -83,6 +86,7 @@ function agregarProductoLista(nombre, cantidad) {
 
     btnComprado.addEventListener("click", () => {
         tr.classList.toggle("comprado");
+        actualizarContadores();
     
         if (tr.classList.contains("comprado")) {
           btnComprado.textContent = "Pendiente";
@@ -93,6 +97,7 @@ function agregarProductoLista(nombre, cantidad) {
 
     btnEliminar.addEventListener("click", () => {
         tr.remove();
+        actualizarContadores();
       });
     
     tdAcciones.appendChild(btnComprado);
@@ -103,4 +108,14 @@ function agregarProductoLista(nombre, cantidad) {
     tr.appendChild(tdAcciones);
   
     lista.appendChild(tr);
+    actualizarContadores();
+  }
+
+  function actualizarContadores() {
+    const filas = lista.querySelectorAll("tr");
+    const comprados = lista.querySelectorAll("tr.comprado");
+  
+    contadorTotal.textContent = filas.length;
+    contadorComprados.textContent = comprados.length;
+    contadorPendientes.textContent = filas.length - comprados.length;
   }
