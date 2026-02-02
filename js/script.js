@@ -70,16 +70,32 @@ function agregarProductoLista(nombre, cantidad) {
     tdCantidad.textContent = cantidad;
   
     const tdAcciones = document.createElement("td");
+
+    const btnComprado = document.createElement("button");
+    btnComprado.type = "button";
+    btnComprado.textContent = "Comprado";
+    btnComprado.classList.add("btn","btn-comprado");
   
     const btnEliminar = document.createElement("button");
     btnEliminar.type = "button";
     btnEliminar.textContent = "Eliminar";
-    btnEliminar.classList.add("btn"); 
+    btnEliminar.classList.add("btn","btn-eliminar"); 
+
+    btnComprado.addEventListener("click", () => {
+        tr.classList.toggle("comprado");
+    
+        if (tr.classList.contains("comprado")) {
+          btnComprado.textContent = "Pendiente";
+        } else {
+          btnComprado.textContent = "Comprado";
+        }
+      });
 
     btnEliminar.addEventListener("click", () => {
         tr.remove();
       });
     
+    tdAcciones.appendChild(btnComprado);
     tdAcciones.appendChild(btnEliminar);
 
     tr.appendChild(tdNombre);

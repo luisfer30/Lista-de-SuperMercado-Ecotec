@@ -80,6 +80,36 @@
   .btn-primary:hover {
     background-color: green;
   }  
+  .btn-comprado {
+    background-color: #2e7d32; /* verde */
+    color: white;
+  }
+  
+  .btn-comprado:hover {
+    background-color: #1b5e20;
+  }
+  
+  /* Botón pendiente */
+  .btn-pendiente {
+    background-color: #f9a825; /* amarillo */
+    color: #333;
+  }
+  
+  .btn-pendiente:hover {
+    background-color: #f57f17;
+  }
+  
+  /* Botón eliminar */
+  .btn-eliminar {
+    background-color: #d32f2f; /* rojo */
+    color: white;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #b71c1c;
+  }
+
+
   /* Contadores */
   .Contadores {
     display: flex;
@@ -108,7 +138,7 @@
     color: #0d47a1;
   }
   
-  /* Lista de productos */
+  /*Sección Lista - Actualizado a table */
   .list-section h2 {
     margin-bottom: 0.8rem;
     border-bottom: 2px solid #0d47a1;
@@ -137,6 +167,15 @@
     background-color: #f5f5f5;
   }
   
+  .comprado {
+    opacity: 0.6;
+    background-color: #e8f5e9;
+  }
+  
+  .comprado td:first-child {
+    text-decoration: line-through;
+  }
+
   /* Footer */
   .footer {
     text-align: center;
